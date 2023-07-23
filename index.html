@@ -9,30 +9,54 @@
 
     <link rel="stylesheet" href="lib/fontawesome-free-5.15.4-web/css/all.min.css">
     <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/common.css">
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/jquery/js/jquery-3.6.3.min.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <img src="./images/under-construction.gif" alt="网站正在建设中">
-        <p class="h1" lang="zh-CN">网站正在建设中</p>
-        <p class="h1" lang="zh-TW">網站正在建設中</p>
-        <p class="h1" lang="en">Website under construction</p>
-        <p class="h1" lang="ru">Сайт в стадии разработки</p>
-        <p class="h1" lang="ja">ウェブサイト構築中</p>
-        <p class="h1" lang="ko">웹 사이트 구축 중</p>
-        <p class="h1" lang="de">Website im Aufba</p>
-        <p class="h1" lang="fr">Site web en construction</p>
-    </div>
+<body class="container mt-4">
+    <header>
+        <div class="alert alert-info">
+            <h1 class="h6">网站门户正在建设中！</h1>
+            <p>此网页为临时页面，网站建设完成后将自动跳转至新网站。</p>
+        </div>
+        <nav>
+            网站导航：
+            <ul>
+                <li><a href="https://blog.yuba.tech">煜霸科技博客</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="under-construction">
+            <h2 class="h1" lang="zh-CN">网站正在建设中</h2>
+            <p class="h1" lang="zh-TW">網站正在建設中</p>
+            <p class="h1" lang="en">Website under construction</p>
+            <p class="h1" lang="ru">Сайт в стадии разработки</p>
+            <p class="h1" lang="ja">ウェブサイト構築中</p>
+            <p class="h1" lang="ko">웹 사이트 구축 중</p>
+            <p class="h1" lang="de">Website im Aufbau</p>
+            <p class="h1" lang="fr">Site web en construction</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 煜霸科技</p>
+    </footer>
+
+    <script>
+        $(function () {
+            $("#year").text(new Date().getFullYear());
+        });
+    </script>
 
     <style>
         body {
             background-color: var(--bs-gray-200);
         }
 
-        .container {
+        .under-construction,
+        footer {
             text-align: center;
         }
 
